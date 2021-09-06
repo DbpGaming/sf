@@ -10,7 +10,10 @@ case $(echo "$MENU" | tr '[:upper:]' '[:lower:]') in
 *)SELECT="$MENU";;
 esac
 
-file=$(ls -arF1 | $SELECT)
+case $(echo "$1" | tr '[:upper:]' '[:lower:]') in
+	-a)file=$(ls -rF1 | $SELECT);;
+	*)file=$(ls -arF1 | $SELECT);;
+esac
 
 case $(echo "$file" | tr '[:upper:]' '[:lower:]') in
 */)
