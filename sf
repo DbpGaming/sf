@@ -1,6 +1,16 @@
 #!/bin/sh
 
-file=$(ls -arF1 | pick)
+if [ -z "$MENU" ]
+then
+	return 0
+fi
+
+case $(echo "$MENU" | tr '[:upper:]' '[:lower:]') in
+*dmenu*)SELECT=$MENU" -c -l 10 ";;
+*)SELECT="$MENU";;
+esac
+
+file=$(ls -arF1 | $SELECT)
 
 case $(echo "$file" | tr '[:upper:]' '[:lower:]') in
 */)

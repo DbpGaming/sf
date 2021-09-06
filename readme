@@ -1,1 +1,2 @@
 add alias `sf=". sf"` to your shell if you want CD to work, as it has to be ran in the current process.
+also set your $MENU variable to what menu you want to use. dmenu and pick both work.
