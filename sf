@@ -2,7 +2,7 @@
 
 if [ -z "$MENU" ]
 then
-	return 0
+	MENU="dmenu"
 fi
 
 case $(echo "$MENU" | tr '[:upper:]' '[:lower:]') in
