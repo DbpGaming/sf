@@ -1,0 +1,1 @@
+add alias `sf=". sf"` to your shell if you want CD to work, as it has to be ran in the current process.

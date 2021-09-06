@@ -1,0 +1,11 @@
+#!/bin/sh
+
+file=$(ls -arF1 | pick)
+
+case $(echo "$file" | tr '[:upper:]' '[:lower:]') in
+*/)
+cd "$file"
+. sf
+;;
+*)sopen "$file";;
+esac
